@@ -47,22 +47,21 @@ class Status(models.Model):
 
 
 class Author(models.Model):
-    first_name = models.CharField(max_length=100,
-                                  help_text="Kitobning Avtorini kiriting",
-                                  verbose_name="Kitobning Avtori")
+    first_name = models.CharField(max_length=100, 
+                                  help_text="Avtorning ismini kiriting!", 
+                                  verbose_name='Avtorning ismi')
     last_name = models.CharField(max_length=100, 
-                                 help_text="Avtorning familyasini kiriting",
-                                 verbose_name="Avtor familyasi")
-    date_of_birth = models.DateField(help_text="Avtorning tug'ilgan kunini kiriting!",
-                                     verbose_name="Tug'ilgan kuni",
+                                 help_text="Avtorning familyasini kiriting!",
+                                 verbose_name="Avtorning familyasi")
+    date_of_birth = models.DateField(help_text="Avtorning tug'ilgan kunini kiritng!", 
+                                     verbose_name="Avtorning tug'ilgan kuni",
                                      null=True, blank=True)
-    
-    about = models.TextField(help_text="Avtor haqida ma'lumot!",
-                             verbose_name="Avtor haqida")
+    about = models.TextField(help_text="Avtor haqida", verbose_name="Avtor haqida")
     photo = models.ImageField(upload_to="author/%Y/%m/%d",
-                              help_text="Avtorning rasmini kiriting",
+                              help_text="Avtorning rasimini kiriting!",
                               verbose_name="Avtor rasmi",
                               null=True, blank=True)
+    
     
     def __str__(self) -> str:
         return self.last_name
