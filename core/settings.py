@@ -86,7 +86,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-LANGUAGE_CODE = 'uz-uz'
+LANGUAGE_CODE = 'en-en'
 
 TIME_ZONE = 'Asia/Tashkent'
 

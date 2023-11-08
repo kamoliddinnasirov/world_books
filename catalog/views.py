@@ -27,8 +27,20 @@ class BookListView(ListView):
     model = Book
     context_object_name = 'books'
     template_name = "books.html"
+    paginate_by = 3
 
 class BookDetailView(DetailView):
     model = Book
     context_object_name = "book"
     template_name = "book_detail.html"
+
+
+class AuthorListView(ListView):
+    model = Author
+    paginate_by = 3
+    template_name = 'author_list.html'
+
+
+class AuthorDetailView(DetailView):
+    model = Author
+    template_name = "author_detail.html"
