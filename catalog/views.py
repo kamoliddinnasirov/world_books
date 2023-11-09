@@ -44,3 +44,36 @@ class AuthorListView(ListView):
 class AuthorDetailView(DetailView):
     model = Author
     template_name = "author_detail.html"
+
+
+
+def about(request):
+    text_head = "About company"
+    name = "United International Company"
+    rab1 = "Electronics books"
+    rab2 = "Books scienes"
+    rab3 = "Lorem ipsum1"
+    rab4 = "Lorem ipsum2"
+    context = {"text_head" : text_head, "name" : name,
+               "rab1" : rab1, "rab2" : rab2,
+               "rab3" : rab3, "rab4" : rab4,
+               }
+    
+    return render(request, "about.html", context)
+
+
+def contact(request):
+    text_head = "Contact"
+    name = "United International Company"
+    address = "A.Navoiy 204"
+    tel = "91-783-17-70"
+    email = "kamoliddinnasirov@mail.ru"
+    context = {
+        "text_head" : text_head,
+        "name" : name,
+        "address" : address,
+        "tel" : tel,
+        "email" : email
+    }
+
+    return render(request, "contact.html", context)
