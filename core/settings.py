@@ -107,3 +107,6 @@ MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR / 'media/') # upload_to='image/ndksandkjsan' ///// media/image/image.png/17.06.2000
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_REDIRECT_URL = '/'
