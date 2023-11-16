@@ -1,6 +1,13 @@
 from django import forms 
 from datetime import date
-from .models import Author
+from .models import Author, Book
+
+
+
+class BookModelForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = '__all__'
 
 
 
